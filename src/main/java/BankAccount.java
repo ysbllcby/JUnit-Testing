@@ -2,6 +2,9 @@ public class BankAccount {
 
     private double balance;
     private double minimumBalance;
+    private boolean isActive = true;
+
+    private String bankAccountHolder;
 
     public BankAccount(double balance, double minimumBalance) {
         this.balance = balance;
@@ -14,6 +17,18 @@ public class BankAccount {
 
     public double getMinimumBalance() {
         return minimumBalance;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public String getBankAccountHolder() {
+        return bankAccountHolder;
+    }
+
+    public void setBankAccountHolder(String bankAccountHolder) {
+        this.bankAccountHolder = bankAccountHolder;
     }
 
     public double withdraw(double amount) {
